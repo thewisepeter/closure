@@ -1,31 +1,15 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <style>
-      body {
-        width: 200px;
-        padding: 10px;
-      }
-      input[type="number"] {
-        width: 100%;
-        padding: 5px;
-      }
-      button {
-        margin-top: 10px;
-        width: 100%;
-        padding: 10px;
-        background-color: #007bff;
-        color: white;
-        border: none;
-      }
-    </style>
-  </head>
-  <body>
-    <h3>Closure Settings</h3>
-    <label for="inactivity">Inactivity Time (minutes):</label>
-    <input type="number" id="inactivity" min="1" value="60">
-    <button id="save">Save</button>
+<head>
+  <title>Close Inactive Tabs</title>
+</head>
+<body>
+  <label for="inactivity">Idle Timeout (minutes):</label>
+  <input type="number" id="inactivity" value="30">
+  <button id="save">Save</button>
 
-    <script src="popup.js"></script>
-  </body>
+  <script src="popup.js"></script>
+</body>
+
+
 </html>

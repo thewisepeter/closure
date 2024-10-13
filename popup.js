@@ -11,6 +11,7 @@ document.getElementById("save").addEventListener("click", () => {
   chrome.storage.sync.set({ inactivityThreshold: inactivityMilliseconds }, () => {
     alert('Settings saved!');
     console.log(`Inactivity Threshold saved: ${inactivityMilliseconds} ms`);
+    window.close(); // Close the popup after saving
   });
 });
 

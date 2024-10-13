@@ -8,6 +8,14 @@ chrome.storage.sync.get(['inactivityThreshold'], (result) => {
   }
 });
 
+// Listen for changes to the inactivityThreshold in storage
+chrome.storage.onChanged.addListener((changes, namespace) => {
+  if (changes.inactivityThreshold) {
+    INACTIVITY_THRESHOLD = changes.inactivityThreshold.newValue; // Update threshold
+    console.log(`Inactivity Threshold updated: ${INACTIVITY_THRESHOLD} ms`);
+  }
+});
+
 // Function to check and close inactive tabs
 function checkAndCloseInactiveTabs() {
   chrome.tabs.query({}, (tabs) => {
