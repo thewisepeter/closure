@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Closure",
+    "version": "1.0",
+    "description": "Closes unused tabs after a specified period of inactivity.",
+    "permissions": [
+      "tabs", 
+      "storage", 
+      "scripting"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": ".html",
+      "default_icon": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+      }
+    }
+  }
+  
