@@ -8,14 +8,24 @@
 </head>
 <body>
   <div class="container">
-    <h1>Tab Closure Settings</h1>
-    <label for="inactivity">Inactivity threshold (minutes):</label>
-    <input type="number" id="inactivity" value="30">
-    <button id="save">Save</button>
+    <div class="tabs">
+      <div class="tab active" id="settingsTab">Tab Closure Settings</div>
+      <div class="tab" id="recentTabsTab">
+        Recently Closed Tabs
+      </div>
+    </div>
+    <div class="tab-content">
+      <div class="content active" id="settingsContent">
+        <label for="inactivity">Inactivity threshold (minutes):</label>
+        <input type="number" id="inactivity" value="30">
+        <button id="save">Save</button>
+      </div>
+      <div class="content" id="recentTabsContent">
+        <ul id="closedTabsList"></ul>
+      </div>
+    </div>
   </div>
 
   <script src="popup.js"></script>
 </body>
-
-
 </html>
