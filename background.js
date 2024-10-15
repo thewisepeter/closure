@@ -1,7 +1,6 @@
 let INACTIVITY_THRESHOLD = 10 * 60 * 1000; // Default to 10 minutes in milliseconds
 let tabActivity = {}; // Store the last active time for each tab
-let closedTabs = []; // Store closed tabs
-
+let closedTabs = []; // Store the closed tabs
 
 // Load the custom inactivity threshold from Chrome storage
 chrome.storage.sync.get(['inactivityThreshold'], (result) => {
@@ -44,14 +43,17 @@ function checkAndCloseInactiveTabs() {
       }
 
       let lastActiveTime = tabActivity[tab.id] || now;
+      console.log(`this is the value of lastActiveTime: ${lastActiveTime};`);
+
+      console.log(`this is the difference ${now - lastActiveTime};`);
 
       if (now - lastActiveTime >= INACTIVITY_THRESHOLD) {
 
         closedTabs.push({ id: tab.id, url: tab.url, title: tab.title });
-        console.log("Closed Tabs Array:", closedTabs);
 
         // Save the closed tabs to Chrome storage
         chrome.storage.sync.set({ closedTabs });
+        
         // Close the tab if it has been inactive for the threshold time
         chrome.tabs.remove(tab.id);
       }

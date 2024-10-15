@@ -1,4 +1,4 @@
-
+// Save button click event handler
 document.getElementById("save").addEventListener("click", () => {
   const inactivityMinutes = document.getElementById("inactivity").value;
 
