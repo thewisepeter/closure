@@ -1,7 +1,3 @@
-Here's a draft for your GitHub `README.md` file, explaining how the **Closure Extension** works and how to install it:
-
----
-
 # Closure Chrome Extension
 
 **Closure** is a Chrome extension designed to help you manage your browser tabs more efficiently. It automatically closes inactive tabs after a specified period of inactivity and keeps track of the closed tabs, allowing you to easily reopen them from the popup interface. 
@@ -27,7 +23,7 @@ The extension works in the background, tracking the activity of all open tabs. I
 
 1. **Clone or Download this Repository:**
    ```
-   git clone https://github.com/yourusername/closure-extension.git
+   git clone https://github.com/thewisepeter/closure
    ```
 
 2. **Load the Extension in Chrome:**
@@ -61,15 +57,3 @@ Feel free to fork this project, make improvements, and submit a pull request. Co
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
-
----
-
-## Screenshots
-
-### Popup Interface:
-![Closure Extension Popup](path-to-screenshot.png)
-
-### Recently Closed Tabs:
-![Closed Tabs List](path-to-screenshot.png)
-
----
